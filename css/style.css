@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "VCR OSD MONO";
+    src: url("../fonts/VCR-OSD-MONO.ttf");
+}
+
+body {
+    background: url("../img/bgPuzzle.png");
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    font-family: "VCR OSD MONO", san-serif;
+}
+
+* {
+    font-size: 12pt;
+}
