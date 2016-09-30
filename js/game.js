@@ -59,6 +59,32 @@ var level = parseInt(docCookies.getItem("level"));
 
 var lastKey = 40;
 
+var tripMessages = [
+    "Alas",
+    "Balls",
+    "Bullshit",
+    "D'oh",
+    "Damn",
+    "Damnit",
+    "FUCK",
+    "Fight me",
+    "Fuck off",
+    "Fuck you",
+    "Fuck",
+    "Fuck's sake",
+    "Fucker",
+    "God damnit",
+    "I MERELY STUMBLED",
+    "Learn to walk",
+    "Motherfuck",
+    "Motherfucker",
+    "Not again",
+    "Oops",
+    "Shit",
+    "Walking is hard",
+    "Woe is me",
+];
+
 /* audio */
 var music = new Audio("snd/music.ogg");
 music.loop = true;
@@ -152,6 +178,21 @@ var walk = function(key) {
     else if(key === 40)
         footstep1.play();
 };
+
+var trip = function() {
+    lastKey = 40;
+
+    cash -= 20;
+    docCookies.setItem("cash", cash, 31536000);
+
+    dude.img.src = "img/dude40.png";
+    controls.img.src = "img/controls40.png";
+
+    var btnText = tripMessages[Math.floor(Math.random() * tripMessages.length)];
+    var buttons = {};
+    buttons[btnText] = function() { $(this).dialog("close"); }
+    $("#trip").dialog({buttons: buttons});
+}
 
 /* input events */
 document.getElementsByTagName("body")[0].addEventListener("keyup", function(e) {
