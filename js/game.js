@@ -50,12 +50,9 @@ ctx.mozImageSmoothingEnabled = false;
 document.body.appendChild(canvas);
 
 /* variables */
-if (!docCookies.hasItem("cash")) {
+if (!docCookies.hasItem("cash"))
     docCookies.setItem("cash", 0, 31536000);
-    docCookies.setItem("level", 1, 31536000);
-}
 var cash = parseInt(docCookies.getItem("cash"));
-var level = parseInt(docCookies.getItem("level"));
 
 var lastKey = 40;
 
@@ -182,7 +179,8 @@ var walk = function(key) {
 var trip = function() {
     lastKey = 40;
 
-    cash -= 20;
+    cash = Math.floor(cash * 0.8);
+    if(cash < 0) cash = 0;
     docCookies.setItem("cash", cash, 31536000);
 
     dude.img.src = "img/dude40.png";
@@ -196,58 +194,60 @@ var trip = function() {
 
 /* input events */
 document.getElementsByTagName("body")[0].addEventListener("keyup", function(e) {
-    switch(e.which) {
-        case 65:
-            if(lastKey === 40)
-                walk(65);
-            else
-                trip();
-            break;
-        case 87:
-            if(lastKey === 65)
-                walk(87);
-            else
-                trip();
-            break;
-        case 68:
-            if(lastKey === 87)
-                walk(68);
-            else
-                trip();
-            break;
-        case 83:
-            if(lastKey === 68)
-                walk(83);
-            else
-                trip();
-            break;
-        case 37:
-            if(lastKey === 83)
-                walk(37);
-            else
-                trip();
-            break;
-        case 38:
-            if(lastKey === 37)
-                walk(38);
-            else
-                trip();
-            break;
-        case 39:
-            if(lastKey === 38)
-                walk(39);
-            else
-                trip();
-            break;
-        case 40:
-            if(lastKey === 39)
-                walk(40);
-            else
-                trip();
-            break;
-        case 69:
-            window.location.href = "epay.html";
-            break;
+    if($(".ui-dialog").css("display") !== "block") {
+        switch(e.which) {
+            case 65:
+                if(lastKey === 40)
+                    walk(65);
+                else
+                    trip();
+                break;
+            case 87:
+                if(lastKey === 65)
+                    walk(87);
+                else
+                    trip();
+                break;
+            case 68:
+                if(lastKey === 87)
+                    walk(68);
+                else
+                    trip();
+                break;
+            case 83:
+                if(lastKey === 68)
+                    walk(83);
+                else
+                    trip();
+                break;
+            case 37:
+                if(lastKey === 83)
+                    walk(37);
+                else
+                    trip();
+                break;
+            case 38:
+                if(lastKey === 37)
+                    walk(38);
+                else
+                    trip();
+                break;
+            case 39:
+                if(lastKey === 38)
+                    walk(39);
+                else
+                    trip();
+                break;
+            case 40:
+                if(lastKey === 39)
+                    walk(40);
+                else
+                    trip();
+                break;
+            case 69:
+                window.location.href = "epay.html";
+                break;
+        }
     }
 });
 
