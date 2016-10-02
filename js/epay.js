@@ -33,9 +33,10 @@ items = [
 ]
 
 var buyItem = function(item, cost) {
-    if (docCookies.hasItem(item)) {
-        alert("You already own that item!");
-    } else if (docCookies.getItem("cash") < cost) {
+    if(docCookies.hasItem(item)) {
+        docCookies.setItem("hat", item, 31536000);
+        alert("You're now wearing " + item + ".");
+    } else if(docCookies.getItem("cash") < cost) {
         alert("You can't afford that!");
     } else {
         docCookies.setItem(item, "owned", 31536000);
@@ -47,10 +48,10 @@ var buyItem = function(item, cost) {
 
 var updateItems = function() {
     for (var i in items) {
-        if (docCookies.hasItem(items[i][0])) {
-            // hide owned items
-            document.getElementById(items[i][0]).style.display = "none";
-        } else if (docCookies.getItem("cash") < items[i][1]) {
+        if(docCookies.hasItem(items[i][0])) {
+            // make owned items blue
+            document.getElementById(items[i][0]).style.backgroundColor = "#0000ff";
+        } else if(docCookies.getItem("cash") < items[i][1]) {
             // make items that cannot be afforded red
             document.getElementById(items[i][0]).style.backgroundColor = "#ff0000";
         }
