@@ -35,12 +35,15 @@
  */
     </script>
 
-    <a href="index.html">Back</a>
+    <a id="back" href="index.html">Back</a>
     <h2 id="cash"></h2>
 
-    <h1>ePay</h1>
-    <button id="0" onclick="buyItem(this.id, 10)">$10 Hat 0</button>
-    <button id="1" onclick="buyItem(this.id, 20)">$20 Hat 1</button>
+    <div id="store">
+        <h1 id="title">ePay</h1>
+        <button id="0" onclick="buyItem(this.id, 10)">$10 Hat 0</button>
+        <button id="1" onclick="buyItem(this.id, 20)">$20 Hat 1</button>
+        <button id="2" onclick="buyItem(this.id, 99999999999999)">$99999999999999 Hat 2</button>
+    </div>
 
     <script src="js/cookies.js"></script>
     <script src="js/epay.js"></script>

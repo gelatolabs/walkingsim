@@ -1,0 +1,120 @@
+a, button {
+    font-family: sans-serif;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: .25em;
+    border: none;
+    border-radius: .25em;
+    color: #444;
+    background-color: #fff;
+    box-shadow: 0 .01em 0px #dededa,
+        0 .06em 0 #dededa,
+        0 .08em 0 #dededa,
+        0 .12em 0 #dededa,
+        0 .14em 0 #dededa,
+        0 .16em 0 #dededa,
+        0 .18em 0 #dbdbd6,
+        0 .22em 0 #dbdbd6,
+        0 .24em 0 #dbdbd6,
+        0 .26em 0 #d9d9d4,
+        0 .28em 0 #d9d9d4,
+        0 .32em 0 #d8d8d3,
+        0 .34em 0 #d8d8d3,
+        0 .36em 0 #d8d8d3,
+        0 .38em 0 #d6d6d1,
+        0 .42em 0 #d6d6d1,
+        0 .06em .06rem rgba(104, 104, 92, 0.15),
+        .07em .105em .04em rgba(0, 0, 0, .015),
+        -.02em .09em .05em rgba(104, 104, 92, 0.25),
+        -.03em .07em .065em rgba(104, 104, 92, 0.1),
+        -.075em .08em .09em rgba(104, 104, 92, 0.06),
+        -.09em .06em .195em rgba(104, 104, 92, 0.095);
+}
+
+a:last-child, button:last-child {
+    clear:both;
+}
+
+a:hover, button:hover {
+    background: #ffffaa !important;
+    box-shadow: 0 .01em 0px #dededa,
+        0 .06em 0 #dededa,
+        0 .08em 0 #dededa,
+        0 .12em 0 #dededa,
+        0 .14em 0 #dededa,
+        0 .16em 0 #dededa,
+        0 .18em 0 #dbdbd6,
+        0 .22em 0 #dbdbd6,
+        0 .24em 0 #dbdbd6,
+        0 .26em 0 #d9d9d4,
+        0 .28em 0 #d9d9d4,
+        0 .32em 0 #d8d8d3,
+        0 .34em 0 #d8d8d3,
+        0 .36em 0 #d8d8d3,
+        0 .38em 0 #d6d6d1,
+        0 .42em 0 #d6d6d1,
+        0 .06em .06rem rgba(104, 104, 92, 0.15),
+        .07em .105em .04em rgba(0, 0, 0, .015),
+        -.02em .09em .05em rgba(104, 104, 92, 0.25),
+        -.03em .07em .065em rgba(104, 104, 92, 0.1),
+        -.075em .08em .09em rgba(104, 104, 92, 0.06),
+        -.09em .06em .195em rgba(104, 104, 92, 0.095);
+}
+
+a:active, button:active {
+    box-shadow: 0 .01em 0px #dededa,
+        0 .06em 0 #dededa,
+        0 .08em 0 #dededa,
+        0 .12em 0 #dededa,
+        0 .14em 0 #dededa,
+        0 .16em 0 #dededa,
+        0 .18em 0 #dbdbd6,
+        0 .22em 0 #dbdbd6,
+        0 .24em 0 #dbdbd6,
+        0 .26em 0 #d9d9d4,
+        0 .28em 0 #d9d9d4,
+        0 .32em 0 #d8d8d3,
+        0 .34em 0 #d8d8d3,
+        0 .36em 0 #d8d8d3,
+        0 .38em 0 #d6d6d1,
+        0 .42em 0 #d6d6d1,
+        0 .06em .06rem rgba(104, 104, 92, 0.15),
+        .07em .105em .04em rgba(0, 0, 0, .015),
+        -.02em .09em .05em rgba(104, 104, 92, 0.25),
+        -.03em .07em .065em rgba(104, 104, 92, 0.1),
+        -.075em .08em .09em rgba(104, 104, 92, 0.06),
+        -.09em .06em .195em rgba(104, 104, 92, 0.095),
+        0 0 0 1px rgba(0,0,0, 0.15) inset,
+        0 0 6px rgba(0,0,0, 0.20) inset;
+}
+
+a:focus, button:focus {
+    background-image: none;
+}
+
+#back {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+}
+
+#cash {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+}
+
+#store {
+    position: fixed;
+    top: 5rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+#title {
+    font-family: sans-serif;
+    font-size: 4rem;
+}

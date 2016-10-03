@@ -29,7 +29,8 @@ var updateCoins = function() {
 
 items = [
     ["0", 10],
-    ["1", 20]
+    ["1", 20],
+    ["2", 99999999999999]
 ]
 
 var buyItem = function(item, cost) {
@@ -50,10 +51,10 @@ var updateItems = function() {
     for (var i in items) {
         if(docCookies.hasItem(items[i][0])) {
             // make owned items blue
-            document.getElementById(items[i][0]).style.backgroundColor = "#0000ff";
+            document.getElementById(items[i][0]).style.backgroundColor = "#aaaaff";
         } else if(docCookies.getItem("cash") < items[i][1]) {
             // make items that cannot be afforded red
-            document.getElementById(items[i][0]).style.backgroundColor = "#ff0000";
+            document.getElementById(items[i][0]).style.backgroundColor = "#ffaaaa";
         }
     }
 }
